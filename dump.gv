@@ -1,0 +1,34 @@
+digraph structs {
+    node [color=black, shape=box, style="filled"];
+    node0 [fillcolor="#63e69e", label="/"];
+    edge [color="#3cf71b"]; node0 -> node1;
+    node1 [fillcolor="#63e69e", label="*"];
+    edge [color="#3cf71b"]; node1 -> node3;
+    node3 [fillcolor="#5ebfff", label="6"];
+    edge [color="#ff0000"]; node1 -> node4;
+    node4 [fillcolor="#5ebfff", label="14"];
+    edge [color="#ff0000"]; node0 -> node2;
+    node2 [fillcolor="#63e69e", label="-"];
+    edge [color="#3cf71b"]; node2 -> node5;
+    node5 [fillcolor="#63e69e", label="*"];
+    edge [color="#3cf71b"]; node5 -> node11;
+    node11 [fillcolor="#63e69e", label="*"];
+    edge [color="#3cf71b"]; node11 -> node23;
+    node23 [fillcolor="#5ebfff", label="2"];
+    edge [color="#ff0000"]; node11 -> node24;
+    node24 [fillcolor="#5ebfff", label="x"];
+    edge [color="#ff0000"]; node5 -> node12;
+    node12 [fillcolor="#5ebfff", label="pi"];
+    edge [color="#ff0000"]; node2 -> node6;
+    node6 [fillcolor="#63e69e", label="+"];
+    edge [color="#3cf71b"]; node6 -> node13;
+    node13 [fillcolor="#63e69e", label="-"];
+    edge [color="#3cf71b"]; node13 -> node27;
+    node27 [fillcolor="#5ebfff", label="100"];
+    edge [color="#ff0000"]; node13 -> node28;
+    node28 [fillcolor="#5ebfff", label="7"];
+    edge [color="#ff0000"]; node6 -> node14;
+    node14 [fillcolor="#63e69e", label="SIN"];
+    edge [color="#3cf71b"]; node14 -> node29;
+    node29 [fillcolor="#5ebfff", label="9"];
+}
