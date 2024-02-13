@@ -21,7 +21,6 @@ const char SIN = 's';
 const char COS = 'c';
 const char PI  = 'p';
 const char LN  = 'l';
-const char LG  = 'g';
 const char SH  = 'w';
 const char CH  = 'h';
 typedef enum valueType
@@ -35,12 +34,8 @@ typedef struct value
 {
     int type;
     double arg;
-    //char   oper;
-    //double num;
-    //char   var;
-    int subtree_status;
 }value;
-const value DEAD_VALUE = {2003, '*', 24, (char )'A', 10};
+//const value DEAD_VALUE = {2003, '*', 24, (char )'A', 10};
 typedef value *value_t;
 
 typedef enum Errors
@@ -81,6 +76,7 @@ typedef enum WhichChild
 void TreeCtor( Tree* tree );
 void TreeDtor( Tree* tree );
 int NodeDtor( Node* node );
+Node* CopyNode( Node* data );
 int InviteNode( Tree* tree, Node* node, WhichChild child, value_t value );
 int RemoveNode( Tree* tree, Node* node );
 int TreeDump( Tree* tree, FILE* logger );

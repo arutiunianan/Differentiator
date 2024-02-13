@@ -14,7 +14,7 @@ void TreeCtor(Tree* tree )
 {
     assert( tree );
 
-    tree->log =  fopen( "treelog.txt","wb" );
+    tree->log = fopen( "treelog.txt","wb" );
     tree->root = NULL;
     tree->size = 0;
 }
@@ -45,6 +45,32 @@ int NodeDtor( Node* node)
     node->right = NULL;
     node->value = NULL;
     free(node);
+}
+
+Node* CopyNode( Node* data )
+{
+
+	if( !data )
+		return NULL;
+
+    Node* node = ( Node* )calloc( 1, sizeof( Node ) );
+
+    node->value = ( value* )calloc( 1, sizeof( value ) );
+	node->value->arg = data->value->arg;
+    node->value->type = data->value->type;
+    node->parent = NULL;
+	if(data->left)
+    {
+	    node->left  = CopyNode( data->left);
+        node->left->parent = node;
+    }
+    if(data->right)
+    {
+	    node->right = CopyNode( data->right);
+        node->right->parent = node;
+    }
+    
+	return node;
 }
 
 int InviteNode( Tree* tree, Node* node, WhichChild child, value_t value )
@@ -151,26 +177,26 @@ int NodeDump( Node *node, size_t number_of_node, FILE *dump_file )
         }
         else if (node->value->type == OPER_TYPE)
         {
-            switch (node->value->oper)
+            switch ( (char) node->value->arg )
             {
                 case MUL:
-                    fprintf(dump_file, "%c", node->value->oper);
+                    fprintf(dump_file, "%c", (char) node->value->arg);
                     break;
 
                 case SUB:
-                    fprintf(dump_file, "%c", node->value->oper);
+                    fprintf(dump_file, "%c", (char) node->value->arg);
                     break;
 
                 case ADD:
-                    fprintf(dump_file, "%c", node->value->oper);
+                    fprintf(dump_file, "%c", (char) node->value->arg);
                     break;
             
                 case DIV:
-                    fprintf(dump_file, "%c", node->value->oper);
+                    fprintf(dump_file, "%c", (char) node->value->arg);
                     break;
 
                 case POW:
-                    fprintf(dump_file, "%c", node->value->oper);
+                    fprintf(dump_file, "%c", (char) node->value->arg);
                     break;
                 
                 case EXP:
@@ -186,7 +212,6 @@ int NodeDump( Node *node, size_t number_of_node, FILE *dump_file )
                 CASE(SIN);
                 CASE(COS);
                 CASE(LN);
-                CASE(LG);
 
                 default:
                     fprintf(dump_file, "dead");
@@ -195,11 +220,11 @@ int NodeDump( Node *node, size_t number_of_node, FILE *dump_file )
         }
         else if (node->value->type == NUM_TYPE)
         {
-            fprintf(dump_file, "%lg", node->value->num);
+            fprintf(dump_file, "%lg", node->value->arg);
         }
         else if (node->value->type == VAR_TYPE)
         {
-            fprintf(dump_file, "%c", node->value->var);
+            fprintf(dump_file, "%c", (char) node->value->arg);
         }
         fprintf(dump_file, "\"");
         fprintf(dump_file, "];\n");
