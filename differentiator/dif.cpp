@@ -67,9 +67,15 @@ void ChangeNode(Node* node, Node* copy_node)
 Node* CreateNodeWithType(int type, double arg)
 {
     Node* node = (Node*)calloc(1, sizeof(Node));
-    if(node == NULL) return NULL;
+    if(node == NULL) 
+    {
+        return NULL;
+    }
     value* argum = (value*)calloc(1, sizeof(value));
-    if  (argum == NULL) return NULL;
+    if  (argum == NULL) 
+    {
+        return NULL;
+    }
     argum->type = type;
     argum->arg = arg;
     node->value = argum;
@@ -79,7 +85,10 @@ Node* CreateNodeWithType(int type, double arg)
 Node* CreateNodeWithType(int type, double arg, Node* val)
 {
     Node* node = CreateNodeWithType(type, arg);
-    if(node == NULL) return NULL;
+    if(node == NULL) 
+    {
+        return NULL;
+    }
     CONNECT(node, val, left);
     return node;
 }
@@ -87,7 +96,10 @@ Node* CreateNodeWithType(int type, double arg, Node* val)
 Node* CreateNodeWithType(int type, double arg, Node* val1, Node* val2)
 {
     Node* node = CreateNodeWithType(type, arg);
-    if(node == NULL) return NULL;
+    if(node == NULL) 
+    {
+        return NULL;
+    }
     CONNECT(node, val1, left);
     CONNECT(node, val2, right);
     return node;
@@ -145,7 +157,10 @@ int ReadFunc(char** str, int* n)
 
 Node* GetN(char** str)
 {
-    if (str == NULL || *str == NULL) return NULL;
+    if (str == NULL || *str == NULL) 
+    {
+        return NULL;
+    }
 
     double num = 0;
     int check = 0;
@@ -160,7 +175,10 @@ Node* GetN(char** str)
 
 Node* GetV(char** str)
 {
-    if (str == NULL || *str == NULL) return NULL;
+    if (str == NULL || *str == NULL) 
+    {
+        return NULL;
+    }
 
     char var = 0;
     if ('a' <= **str && **str <= 'z')
@@ -170,21 +188,30 @@ Node* GetV(char** str)
     }
 
     if(var != 0)
+    {
         return CreateNodeWithType(VAR_TYPE, var);
+    }
     else
+    {
         return GetN(str);
+    }
 }
 
 Node* GetF(char** str)
 {
-    if(str == NULL || *str == NULL) return NULL;
+    if(str == NULL || *str == NULL) 
+    {
+        return NULL;
+    }
 
     int oper = 0;
 
     ReadFunc(str, &oper);
 
     if(IsMathConst(oper))
+    {
         return CreateNodeWithType(OPER_TYPE, IsMathConst(oper));
+    }
     else if(oper != 0)
     {
         Node* val = GetP(str);
@@ -195,7 +222,9 @@ Node* GetF(char** str)
         return node;
     }
     else
+    {
         return GetV(str);
+    }
 }
 
 Node* GetP(char** str)
