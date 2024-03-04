@@ -1,45 +1,62 @@
-//#include "tech.h"
-#include "dif.h"
+#include "differentiator/dif.h"
+
+int DoDifAndWrite(Dif_file* dif_file, char* mode, int* fig_number)
+{
+    int n = 0;
+    TreeFill(dif_file);
+    
+    if(!strcmp(mode, "dif"))
+    {
+        printf("Degree of differentiation: ");
+        scanf("%d", &n);
+        PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/in.txt", *fig_number);
+        (*fig_number)++;
+        DifferentiateNTimes(dif_file, 'x', n);
+        WriteAfterMode(dif_file->tex, 1, n);
+    }
+    else if(!strcmp(mode, "mac"))
+    {
+        printf("Degree of the Maclaurin series: ");
+        scanf("%d", &n);
+        PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/in.txt", *fig_number);
+        (*fig_number)++;
+        dif_file->tree = MaclaurinSeries(dif_file, 'x', n);
+        WriteAfterMode(dif_file->tex, 0, n);
+    }
+    else
+    {
+        return 1;
+    }
+    PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/out.txt", *fig_number);
+    (*fig_number)++;
+
+    Optimization(dif_file->tree->root);
+    PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/optim_out.txt", *fig_number);
+    (*fig_number)++;
+    return 0;
+}
 
 int main()
 {
-    FILE* log = fopen( "tex.tex","wb" );
-    FILE* out1 = fopen( "out1.txt","wb" );
-    FILE* out2 = fopen( "out2.txt","wb" );
-    FILE* out3 = fopen( "out4.txt","wb" );
-    //FILE* out4 = fopen( "out3.txt","wb" );
+    Dif_file dif_file = {};
+    DifCtor(&dif_file, "test.txt");
 
-    Dif dif = {};
-    StartLatex( log );
-    DifCtor( &dif, "test.txt", "test.txt" );
-    TreeFill( &dif );
-    PrintNewExpression(dif.tree,log,out1);
-
-    //TreeDump( dif.tree, dif.tree->log );
-    DifferentiateNTimes( &dif, log, 'u', 0 );
-    Optimization( dif.tree->root );
-    PrintNewExpression( dif.tree ,log,out2);
-
-    /*Tree* new_tree = ( Tree* )calloc( 1, sizeof( Tree ) );
-    new_tree->errors = dif.tree->errors;
-    new_tree->log = dif.tree->log;
-    new_tree->size = dif.tree->size;
-    new_tree->root = DifferentiateNode( dif.tree->root, 'u');*/
-    //Optimization( dif.tree->root );
-    //PrintNewExpression( dif.tree ,log,out3);
-
+    int fig_number = 0;
+    char* mode = (char*)calloc(4, sizeof(char));
+    do
+    {
+        printf("\nChoose the mode\n"
+                "1. Differentiate N times\n"
+                "2. Maclaurin series\n"
+                "3. Exit\n"
+                "(print dif/mac/exit)\n");
+        scanf("%s", mode);
+        
+        if(DoDifAndWrite(&dif_file, mode, &fig_number) && strcmp(mode, "exit"))
+        {
+            printf("Incorrect input. Try again\n");
+        }
+    } while(strcmp(mode, "exit"));
     
-    dif.tree = MaclaurinSeriesBeforeN( &dif, 'u', 3 );
-    PrintNewExpression( dif.tree ,log,out3);
-
-    
-
-    Optimization( dif.tree->root );
-    PrintNewExpression( dif.tree ,log,out3);
-
-
-TreeDump( dif.tree, dif.tree->log );
-    
-
-    EndLatex( log );
+    DifDtor(&dif_file);
 }

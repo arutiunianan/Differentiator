@@ -1,14 +1,13 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from pathlib import Path
 import sympy as sp
 import sys
 
 if __name__ == '__main__':
-    '''
-    sys.argv[1] - dir with tests
-    '''
-    f1 = open(sys.argv[1], 'r') #'out1.txt'
-    f2 = open(sys.argv[2], 'r') #'out3.txt'
+
+    f1 = open(sys.argv[1], 'r') #'in.txt'
+    f2 = open(sys.argv[2], 'r') #'out.txt'
 
     x = sp.symbols('x')
 
@@ -27,9 +26,11 @@ if __name__ == '__main__':
     y_values1 = my_function(x_values)
     plt.plot(x_values, y_values1, label=expr_str1)
 
-    plt.title('Ani Taylor Diff Graph')
+    plt.title('Ani Graph<3')
     plt.xlabel('x')
     plt.ylabel('y')
     plt.legend()
     plt.grid(True)
-    plt.savefig('figs/fig1.png')
+    plt.savefig('figs/fig' + sys.argv[3] + '.png',)
+
+    #plt.show()

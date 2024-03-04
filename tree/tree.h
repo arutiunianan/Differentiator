@@ -8,8 +8,7 @@
 #include <assert.h>
 
 const int DEAD_SIZE = -1;
-//typedef char* value_t;
-//const value_t DEAD_VALUE = "YA V ZHOPE";
+
 const char ADD = '+';
 const char SUB = '-';
 const char MUL = '*';

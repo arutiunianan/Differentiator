@@ -14,7 +14,7 @@ void TreeCtor(Tree* tree )
 {
     assert( tree );
 
-    tree->log = fopen( "treelog.txt","wb" );
+    tree->log = fopen( "tree/treelog.txt","wb" );
     tree->root = NULL;
     tree->size = 0;
 }
@@ -49,7 +49,6 @@ int NodeDtor( Node* node)
 
 Node* CopyNode( Node* data )
 {
-
 	if( !data )
 		return NULL;
 
@@ -272,7 +271,7 @@ int TreeDump( Tree* tree, FILE* logger )
     {
 		fprintf( logger, "------------NO_ERRORS----------\n" );
         size_t number_of_node = 0;
-        FILE* dump_file = fopen( "dump.gv", "w" );
+        FILE* dump_file = fopen( "tree/dump.gv", "w" );
     
         fputs( "digraph structs {\n", dump_file );
         fputs( "    node [color=black, shape=box, style=\"filled\"];\n", dump_file );
