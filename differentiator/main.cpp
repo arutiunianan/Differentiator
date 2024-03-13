@@ -1,4 +1,4 @@
-#include "differentiator/dif.h"
+#include "optimization.h"
 
 int DoDifAndWrite(Dif_file* dif_file, char* mode, int* fig_number)
 {
@@ -9,7 +9,7 @@ int DoDifAndWrite(Dif_file* dif_file, char* mode, int* fig_number)
     {
         printf("Degree of differentiation: ");
         scanf("%d", &n);
-        PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/in.txt", *fig_number);
+        PrintNewExpression(dif_file->tree, dif_file->tex, "din.txt", *fig_number);
         (*fig_number)++;
         DifferentiateNTimes(dif_file, 'x', n);
         WriteAfterMode(dif_file->tex, 1, n);
@@ -18,7 +18,7 @@ int DoDifAndWrite(Dif_file* dif_file, char* mode, int* fig_number)
     {
         printf("Degree of the Maclaurin series: ");
         scanf("%d", &n);
-        PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/in.txt", *fig_number);
+        PrintNewExpression(dif_file->tree, dif_file->tex, "in.txt", *fig_number);
         (*fig_number)++;
         dif_file->tree = MaclaurinSeries(dif_file, 'x', n);
         WriteAfterMode(dif_file->tex, 0, n);
@@ -27,11 +27,11 @@ int DoDifAndWrite(Dif_file* dif_file, char* mode, int* fig_number)
     {
         return 1;
     }
-    PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/out.txt", *fig_number);
+    PrintNewExpression(dif_file->tree, dif_file->tex, "out.txt", *fig_number);
     (*fig_number)++;
 
     Optimization(dif_file->tree->root);
-    PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/optim_out.txt", *fig_number);
+    PrintNewExpression(dif_file->tree, dif_file->tex, "optim_out.txt", *fig_number);
     (*fig_number)++;
     return 0;
 }

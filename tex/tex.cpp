@@ -59,8 +59,8 @@ void PrintNewExpression(Tree* tree, FILE* tex, char* outfile_name, int fig_numbe
 
     if(fig_number % 3 == 2)
     {
-        char py_call[77] = "";
-        snprintf(py_call, 77, "python3.8 fig_maker.py differentiator/in.txt differentiator/optim_out.txt %d", fig_number / 3);
+        char py_call[82] = "";
+        snprintf(py_call, 82, "python3.8 figs/fig_maker.py differentiator/in.txt differentiator/optim_out.txt %d", fig_number / 3);
         system(py_call);
         fprintf(tex, "\\begin{figure} [!ht]\n");
         fprintf(tex, "\\begin{flushleft}\n");

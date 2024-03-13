@@ -29,11 +29,6 @@ Node* CreateNodeWithType(int type, double arg, Node* val);
 Node* CreateNodeWithType(int type, double arg, Node* val1, Node* val2);
 Node* DifferentiateNode(Node* node, char var);
 void DifferentiateNTimes(Dif_file* dif_file, char var, int n);
-void Optimization(Node* node);
-
-Tree* MaclaurinSeries(Dif_file* dif_file, char var, int n);
-Tree* CopyTreeForMaclaurin(Tree* tree, char var, int isMaclaurin);
-Node* CopyNodesForMaclaurin(Node* node, char var, int isMaclaurin );
 
 Node* GetE(char** str);
 Node* GetN(char** str);
