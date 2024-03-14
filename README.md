@@ -10,7 +10,7 @@ sin(x)+x^2#
 ````
 <p>Символ <b>#</b> означает конец выражения. Символы после этого знака обрабатываться не будут.</p>
 <p>На основании этого выражения sin(x)+x² строится бинарное дерево:</p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/tree1.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/tree1.jpeg" width=600px>
 <p>Операции, которые расознает программа:</p>
 <ul>
  <li>sin(x)</li>
@@ -23,7 +23,7 @@ sin(x)+x^2#
 
 <h3>2.1. Дифференцирование</h3>
 <p>Этот алгоритм использует рекурсию для преобразования каждого узла особым образом. В итоге мы получим дерево дифференцированной функции. <b>Для примера выше</b> дерево после взятия производной будет выглядеть таким образом:</p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/tree2.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/tree2.jpeg" width=600px>
 <p>Если требуется дифференцирование степени выше единицы, то алгоритм используется повторно для полученного дерева.</p>
 
 <h3>2.2. Получение ряда Маклорена</h3>
@@ -31,20 +31,20 @@ sin(x)+x^2#
 
 <h3>3. Оптимизация</h3>
 <p>Часто после выполнения <b>пункта 2</b> получаются очень объемные деревья. Именно поэтому для удобства чтения деревья оптимизируются. <b>Примеры моих оптимизаций:</b></p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt1.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt2.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt3.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt4.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt5.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt6.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt7.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt8.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt9.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt10.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt11.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt12.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt13.jpeg)
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt14.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt1.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt2.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt3.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt4.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt5.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt6.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt7.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt8.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt9.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt10.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt11.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt12.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt13.jpeg" width=600px>
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt14.jpeg" width=600px>
 
 <h2>Как запустить программу?</h2>
 ````
@@ -55,15 +55,15 @@ make
 ./main_
 ````
 <p>Предлагается выбрать один из модов:</p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console1.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console1.jpeg" width=600px>
 <p>В режиме дифференцирования предлагается ввести степень дифференцирования:</p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console2.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console2.jpeg" width=600px>
 <p>В режиме Маклорена предлагается ввести степень ряда Маклорена:</p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console3.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console3.jpeg" width=600px>
 <p>При неверном вводе мода выводится ошибка:</p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console4.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console4.jpeg" width=600px>
 <p>Ввод продолжается до тех пор, пока пользователь не введет <b>exit</b>:</p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console5.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/console5.jpeg" width=600px>
 <h2>Как выглядит результат работы программы?</h2>
 
 <p>В tex-файл по-очереди выписываются для каждой команды:</p>
@@ -74,8 +74,10 @@ make
  <li>График выражения до и после работы программы</li>
 </ul>
 
+<image src="assets/tree_transf3.png" width=600px>
+
 <p>Для выражения sin(x)+x² результат дифференцирования 1-ой степени будет иметь такой вид:</p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/example1.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/example1.jpeg" width=600px>
 
 <p>А разложение в ряд Маклорена 3-ой степени будет иметь такой вид:</p>
-![image](https://github.com/arutiunianan/Differentiator/blob/main/for_readme/example2.jpeg)
+<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/example2.jpeg" width=600px>
