@@ -5,9 +5,9 @@
 <h2>Какой принцип работы?</h2>
 <h3>1. Создание дерева</h3>
 <p>Программа принимает на вход файл с выражением в виде строки. Это выражение имеет определенную структуру. <b>Например:</b></p>
-''''
+```
 sin(x)+x^2#
-''''
+```
 <p>Символ <b>#</b> означает конец выражения. Символы после этого знака обрабатываться не будут.</p>
 <p>На основании этого выражения sin(x)+x² строится бинарное дерево:</p>
 <image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/tree1.jpeg" width=450px>
@@ -78,5 +78,5 @@ make
 <p>Для выражения sin(x)+x² результат дифференцирования 1-ой степени будет иметь такой вид:</p>
 <image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/example1.jpeg" width=450px>
 
-<p>А разложение в ряд Маклорена 3-ой степени будет иметь такой вид:</p>
+<p>А для разложения в ряд Маклорена 3-ой степени будет иметь такой вид:</p>
 <image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/example2.jpeg" width=450px>
