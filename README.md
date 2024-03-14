@@ -31,21 +31,22 @@ sin(x)+x^2#
 
 <h3>3. Оптимизация</h3>
 <p>Часто после выполнения <b>пункта 2</b> получаются очень объемные деревья. Именно поэтому для удобства чтения деревья оптимизируются. <b>Примеры моих оптимизаций:</b></p>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt1.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt2.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt3.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt4.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt5.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt6.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt7.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt8.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt9.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt10.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt11.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt12.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt13.jpeg" width=300px>
-<image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt14.jpeg" width=300px>
-
+<ul>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt1.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt2.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt3.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt4.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt5.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt6.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt7.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt8.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt9.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt10.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt11.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt12.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt13.jpeg" width=300px></li>
+ <li><image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/opt14.jpeg" width=300px></li>
+</ul>
 <h2>Как запустить программу?</h2>
 ''''
 make
