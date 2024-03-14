@@ -1,5 +1,5 @@
 #include "tex.h"
-
+ 
 void StartLatex(FILE* tex)
 {
     assert(tex != NULL);

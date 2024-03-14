@@ -1,6 +1,6 @@
 #ifndef OPTIM_H_
 #define OPTIM_H_
-
+ 
 #include "maclaurin.h"
 
 void Optimization(Node* node);

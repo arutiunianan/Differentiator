@@ -1,5 +1,5 @@
 #include "differentiator.h"
-
+ 
 #define CONNECT(PAR, CHI, SIDE)           \
     PAR->SIDE = CHI;                       \
     CHI->parent = PAR;

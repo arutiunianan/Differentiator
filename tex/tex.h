@@ -1,6 +1,6 @@
 #ifndef TECH_H_
 #define TECH_H_
-
+ 
 #include "../tree/tree.h"
 
 #include <stdio.h>

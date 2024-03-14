@@ -10,7 +10,7 @@
 #define _SH(_node) CreateNodeWithType(OPER_TYPE, SH, _node)
 #define _CH(_node) CreateNodeWithType(OPER_TYPE, CH, _node)
 
-OPER_DEF(MUL, '*',
+OPER_DEF(MUL, '*', 
     new_node = _ADD(_MUL(DIFF(LEFT), COPY(RIGHT)), _MUL(COPY(LEFT), DIFF(RIGHT))),
 
     if(LEFT->value->type == OPER_TYPE && (LEFT->value->arg == '+' || LEFT->value->arg == '-'))

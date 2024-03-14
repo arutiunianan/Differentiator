@@ -1,5 +1,5 @@
 #include "maclaurin.h"
-
+ 
 double Factorial(int n)
 {
     int factorial = 1;

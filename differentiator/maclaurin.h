@@ -1,6 +1,6 @@
 #ifndef MAC_H_
 #define MAC_H_
-
+ 
 #include "differentiator.h"
 
 Tree* MaclaurinSeries(Dif_file* dif_file, char var, int n);

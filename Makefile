@@ -9,7 +9,7 @@ CFLAGS = -g -ansi -std=gnu++2a -Wc++11-compat -Wc++14-compat -Wc++17-compat -Wal
 		 -Wvariadic-macros -Wno-missing-field-initializers -Wnarrowing -Wno-old-style-cast -Wvarargs     \
 		 -Walloca -Wdangling-else -fcheck-new -fsized-deallocation -fstack-check -fstrict-overflow        \
 		 -fno-omit-frame-pointer
-
+ 
 
 IFLAGS = -I
 
@@ -34,7 +34,7 @@ dif: $(DIF_OBJ) $(OBJ_DIR)/main.o $(TEX_OBJ) $(TREE_OBJ)
 
 clean:
 	rm -rf $(OBJ_DIR)
-	rm $(ASM_PROJ_NAME)
+	rm $(PROJ_NAME)
 
 $(OBJ_DIR)/%.o : $(DIF_SRC_DIR)/%.cpp
 	mkdir -p $(@D)

@@ -1,5 +1,5 @@
 #include "optimization.h"
-
+ 
 void ChangeNode(Node* node, int type, double arg, Node* left, Node* right)
 {
     assert(node != NULL);

@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 import sympy as sp
 import sys
-
+ 
 if __name__ == '__main__':
 
     f1 = open(sys.argv[1], 'r') #'in.txt'

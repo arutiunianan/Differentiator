@@ -1,6 +1,6 @@
 #ifndef DIF_H_
 #define DIF_H_
-
+ 
 #include "../tex/tex.h"
 
 #define LEFT node->left
