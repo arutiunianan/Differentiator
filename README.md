@@ -74,8 +74,6 @@ make
  <li>График выражения до и после работы программы</li>
 </ul>
 
-<image src="assets/tree_transf3.png" width=600px>
-
 <p>Для выражения sin(x)+x² результат дифференцирования 1-ой степени будет иметь такой вид:</p>
 <image src="https://github.com/arutiunianan/Differentiator/blob/main/for_readme/example1.jpeg" width=600px>
 
