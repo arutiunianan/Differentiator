@@ -1,4 +1,5 @@
 #include "optimization.h"
+char var = 'x';
  
 int DoDifAndWrite(Dif_file* dif_file, char* mode, int* fig_number)
 {
@@ -11,7 +12,7 @@ int DoDifAndWrite(Dif_file* dif_file, char* mode, int* fig_number)
         scanf("%d", &n);
         PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/in.txt", *fig_number);
         (*fig_number)++;
-        DifferentiateNTimes(dif_file, 'x', n);
+        DifferentiateNTimes(dif_file, var, n);
         WriteAfterMode(dif_file->tex, 1, n);
     }
     else if(!strcmp(mode, "mac"))
@@ -20,7 +21,7 @@ int DoDifAndWrite(Dif_file* dif_file, char* mode, int* fig_number)
         scanf("%d", &n);
         PrintNewExpression(dif_file->tree, dif_file->tex, "differentiator/in.txt", *fig_number);
         (*fig_number)++;
-        dif_file->tree = MaclaurinSeries(dif_file, 'x', n);
+        dif_file->tree = MaclaurinSeries(dif_file, var, n);
         WriteAfterMode(dif_file->tex, 0, n);
     }
     else
